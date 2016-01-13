@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="/css/style.css" rel="stylesheet">
+		<script src="/js/jquery-1.11.3.min.js"></script>
+		<script src="/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/js/jquery-validation/dist/jquery.validate.js"></script>
+		<script src="/js/validations.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeNkMGjF2gCWkOL2d4m9ksPwzwhH5uE_E"></script>
+		<style>
+      		#map {
+        		height: 100%;
+      		}
+    	</style>
+	</head>
+	<body>
+		<img src="/img/background.jpg" id="background"/>		
+		<div class="container">
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				<div class="jumbotron">
+					<h1>Maps</h1>
+					<h3>Introduce una dirección</h1>
+						<form id="mapsForm">
+  							<fieldset id="userfs" class="form-group red-tooltip">
+    							<label for="direction"> Dirección </label>
+    							<input type="text" class="form-control" id="direction" name="direction" placeholder="Introduce una dirección" equired>
+  							</fieldset>
+  							<button type="button" class="btn btn-primary" onClick="search()">Buscar</button>
+  						</form>
+  						<div id="error">
+  						</div>
+  						<div id="map"></div>
+				</div>
+			</div>
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<div class="container">
+<div class="col-lg-3 col-md-3 col-sm-2 col-xs-2"></div>
+<div class="col-lg-6 col-md-6 col-sm-8 col-xs-8">
+	<div class="jumbotron"><div class="container">
+		<p>Username: {%if user is defined %} {{user}} {% endif %} </p>
+		<p>email: {%if email is defined %} {{email}} {% endif %} </p>
+		<p>Password: <i>password</i></p>
+		<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+		<div class="col-lg-8 col-md-8 col-sm-10 col-xs-10">
+			<form class="form-signup" method="POST" autocomplete="off">
+				<label for="password" class="sr-only">Password</label>
+				<input type="password" id="password" name="password" class="form-control" placeholder="Password" onblur="validatePassword()" data-toggle="tooltip" data-placement="right" title="Password length must be >= 8 and it must contain a number, a lowercase and a uppercase letter">
+				<label for="password" class="sr-only">Password</label>
+				<input type="password" id="newPassword" name="password" class="form-control" placeholder="New password" onblur="validatePassword()" data-toggle="tooltip" data-placement="right" title="Password length must be >= 8 and it must contain a number, a lowercase and a uppercase letter">
+				<label for="confirmPassword" class="sr-only">Confirm Password</label>
+				<input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm Password" onblur="validateNewConfirmPasswords()" data-toggle="tooltip" data-placement="right" title="Old and new password must be different and confirm and new password must be the same">
+				<button class="btn btn-lg btn-primary btn-block" type="button" onclick="changePassword()">Change password</button>
+			</form>
+			<div id="res"></div>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+	</div></div>
+</div>
+<div class="col-lg-3 col-md-2 col-sm-3 col-xs-2"></div>
+</div>

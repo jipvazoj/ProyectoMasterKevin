@@ -1,0 +1,21 @@
+<div id="modal" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="alert alert-danger alert-dismissible fade in" role=alert>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> 
+			<h4>{{ title }}</h4> 
+			<p>
+				{% if errors is defined %}
+				<ul>
+				{% for error in errors %}
+					<li> {{error}} </li>
+				{% endfor %}
+				</ul>
+				{% endif %}
+			</p> 
+			<p> 
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			</p>
+			{% if sessionError is defined %}<input type="hidden" id="sessionError"/>{% endif %}
+		</div>
+	</div>
+</div>

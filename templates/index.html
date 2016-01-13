@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/cover.css" rel="stylesheet">
+		<link href="/css/signin.css" rel="stylesheet">
+		<script src="/js/jquery-1.11.3.min.js"></script>
+		<script src="/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/js/jquery-validation/dist/jquery.validate.js"></script>
+		<script src="/js/validations.js"></script>
+		<script src="/js/index.js"></script>
+    	<script src="/js/gallery.js"></script>
+		<title>MyPhotos</title>
+	</head>
+	<body>
+		<div class="site-wrapper">
+			<div class="site-wrapper-inner">
+				<div class="cover-container">
+					<div class="masthead clearfix">
+						<div class="inner">
+							<h3 class="masthead-brand">MyPhotos</h3>
+							<nav>
+								<ul class="nav masthead-nav">
+									<li id="signin" class="active" onclick="changeContent('signin')"><a>Sign in</a></li>
+									<li id="signup" onclick="changeContent('signup')"><a>Sign up</a></li>
+									<li id="viewpublicphotos" onclick="changeContent('viewpublicphotos')"><a>View Public Photos</a></li>
+								</ul>
+							</nav>
+            			</div>
+	          		</div>
+	          		<div id="content">
+	          			{% extends "/templates/signIn.html" %}
+	          		</div>
+	          		<div class="mastfoot">
+	            		<div class="inner">
+	              			<p>DSSW: Web application with python and Google App Engine Webapp2 </p>
+	            		</div>
+	          		</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<div class="container">
+			<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"></div>
+			<div class="col-lg-10 col-md-10 col-sm-8 col-xs-8">
+				<div class="jumbotron">
+		 			<div class="container kv-main">
+	            		<form id="photoForm" enctype="multipart/form-data" action="{{upload_url}}" method="POST">
+	                		<label>Upload your photos</label>
+	                		<input id="file-es" name="file-es[]" type="file" multiple>
+	                		<div class="radio">
+  								<label><input type="radio" id="optpublic" value="public" name="optradio" checked="checked">Public</label>
+  								<label><input type="radio" id="optprivate" value="private" name="optradio">Private</label>
+							</div>
+	                		<button class="btn btn-primary btn" type="submit" onclick="return checkPhotos()">Upload Photos</button>
+	                		<div id="error"></div>
+	            		</form>
+	        		</div>
+				</div>
+			</div>
+			<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"></div>
+		</div>

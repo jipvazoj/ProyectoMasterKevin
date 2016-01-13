@@ -1,0 +1,26 @@
+<div class="container photos" align="center">
+	<h1 class="white-text">
+		{%if user is defined %}
+			{{user}}
+		{% else %}
+			Public
+		{% endif %}
+		 photos on MyPhotos</h1>
+	<ul class="row">
+		{% set index = 0 %}
+		{% for photo in photos %}
+			<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="imggallery{{index}}">
+                <img class="img-responsive" onclick='gallery("/serve/{{ photo }}", "{{ index }}")' src="/serve/{{ photo }}">
+            </li>
+         	{% set index= index + 1 %} 
+		{% endfor %}
+		<input type="hidden" id="lastIndex" value="{{lastIndex}}" />
+	</ul>
+	<div class="modal modal-transparent bs-example-modal-lg fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content modal-transparent" >         
+				<div class="modal-body modal-transparent"></div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</div>
